@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+	<meta name="renderer" content="webkit">
+	<title>Demo:jQuery-imgMaps</title>
+	<style>
+		.region-map, .region-map a{overflow: hidden;font-size: 0;}
+		.region-map img{max-width: 100%;height: auto;}
+
+		.region-map{position: relative;display: inline-block;}
+		.region-map a{position:absolute;display:block;width:95px;height:18px;}
+		.region-map a.rm-northland{left:380px;top:60px;}
+		.region-map a.rm-auckland{left:176px;top:132px;}
+		.region-map a.rm-waikato{left:134px;top:189px;width:213px}
+		.region-map a.rm-gisborne{left:509px;top:226px;}
+		.region-map a.rm-hawkesbay{left:493px;top:280px;width:109px}
+		.region-map a.rm-wairarapa{left:487px;top:337px;width:116px}
+		.region-map a.rm-nelson{left:88px;top:347px;width:83px}
+		.region-map a.rm-marlborough{left:412px;top:390px;width:123px}
+		.region-map a.rm-canterbury{left:319px;top:469px;width:126px}
+		.region-map a.rm-central-otago{left:227px;top:545px;width:147px}
+	</style>
+	<script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="lib/jQuery-imgMaps.js"></script>
+	<script>
+		$(document).ready(function(e) {
+		    $('.js-imgMaps').imgMaps();
+		});
+	</script>
+
+</head>
+<body>
+	<div class="region-map js-imgMaps">
+		<img src="lib/region-map.jpg" width="618" height="703" alt="">
+		<a href="#" class="rm-northland">Northland</a>
+		<a href="#" class="rm-auckland">Auckland</a>
+		<a href="#" class="rm-waikato">Waikato / Bay of Plenty</a>
+		<a href="#" class="rm-gisborne">Gisborne</a>
+		<a href="#" class="rm-hawkesbay">Hawke's Bay</a>
+		<a href="#" class="rm-wairarapa">Wairarapa</a>
+		<a href="#" class="rm-nelson">Nelson</a>
+		<a href="#" class="rm-marlborough">Marlborough</a>
+		<a href="#" class="rm-canterbury">Canterbury / Waipara</a>
+		<a href="#" class="rm-central-otago">Central Otago</a>
+	</div>
+</body>
+</html>
