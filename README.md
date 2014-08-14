@@ -49,5 +49,5 @@ $(window).load(function(){
 
 #### Demo:
 
-http://mattstow.com/experiment/responsive-image-maps/rwd-image-maps.html
+http://coffeexu.github.io/jQuery-imgMaps/
 
