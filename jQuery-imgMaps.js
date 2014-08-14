@@ -4,12 +4,13 @@
 * Allows image maps to be used in a responsive design by recalculating the a  to match the actual image size on load and window.resize
 *
 * https://github.com/CoffeeXu/jQuery-imgMaps
-* Demo:
+* Demo: http://coffeexu.github.io/jQuery-imgMaps/
 */
 ;(function($) {
 	$.fn.imgMaps = function() {
 		var $obj = this,
-			$img = $obj.find('img');
+			$img = $obj.find('img'),
+			fontz0 = parseInt( $obj.css('font-size') );
 
 		$obj.find('a').each(function() {
 			var $this   = $(this),
@@ -39,6 +40,7 @@
 				$('<img />').load(function() {
 					var oriw = this.width,
 						orih = this.height;
+						
 
 					if (!oriw || !orih) {
 						var temp = new Image();
@@ -49,6 +51,11 @@
 							orih = temp.height;
 					}
 
+					var fontz = fontz0/oriw*w;
+					if(fontz0){
+						$obj.css('font-size',fontz);
+					}
+					
 					$obj.find('a').each(function() {
 						var $this = $(this);
 
